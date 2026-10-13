@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marvel Universe — фан-паблік</title>
+<style>
+:root{--bg:#f4f4f7;--card:#fff;--tx:#14141c;--mut:#5d5d6e;--ac:#e62429;--ac2:#b8860b;--bd:#e2e2ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b12;--card:#16161f;--tx:#f2f2f7;--mut:#a0a0b4;--ac:#ff3b40;--ac2:#f5c451;--bd:#272735}}
+:root[data-theme="dark"]{--bg:#0b0b12;--card:#16161f;--tx:#f2f2f7;--mut:#a0a0b4;--ac:#ff3b40;--ac2:#f5c451;--bd:#272735}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Segoe UI",Roboto,Arial,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:2px solid var(--ac);display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding:10px 5%}
+.logo{font:900 22px Impact,"Arial Black",sans-serif;letter-spacing:2px;background:var(--ac);color:#fff;padding:2px 10px}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{color:var(--tx);text-decoration:none;padding:6px 12px;border-radius:6px;font-weight:600;font-size:15px}
+nav a:hover{background:var(--bd)}nav a.on{background:var(--ac);color:#fff}
+.hero{padding:70px 5% 60px;text-align:center;color:#fff;background:radial-gradient(circle at 20% 20%,#e6242999,transparent 50%),radial-gradient(circle at 85% 80%,#1e5bd199,transparent 50%),#0b0b12}
+.hero h1{font:900 clamp(34px,7vw,72px)/1.05 Impact,"Arial Black",sans-serif;margin:0 0 14px;letter-spacing:2px;text-transform:uppercase}
+.hero p{max-width:640px;margin:0 auto 24px;color:#d8d8e6}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:11px 24px;border-radius:8px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font-size:16px}
+main{max-width:1100px;margin:0 auto;padding:30px 5% 50px}
+.page{display:none}.page.on{display:block}
+h2{font:800 28px Impact,"Arial Black",sans-serif;letter-spacing:1px;margin:30px 0 6px;border-left:6px solid var(--ac);padding-left:12px}
+.sub{color:var(--mut);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac)}
+.card h3{margin:6px 0 4px;font-size:18px}.card p{margin:0;color:var(--mut);font-size:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;background:var(--ac);color:#fff;border-radius:20px;padding:2px 10px}
+.tag.g{background:var(--ac2);color:#111}
+.yr{font:900 30px Impact,sans-serif;color:var(--ac)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+.stats div{text-align:center;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.stats b{display:block;font:900 34px Impact,sans-serif;color:var(--ac)}
+.tl{border-left:3px solid var(--ac);margin-left:8px;padding-left:20px}
+.tl .card{margin-bottom:14px;position:relative}
+.tl .card:before{content:"";position:absolute;left:-30px;top:20px;width:14px;height:14px;border-radius:50%;background:var(--ac);border:3px solid var(--bg)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
+.tabs button{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:20px;padding:6px 16px;cursor:pointer;font-weight:600}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.cd{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.cd div{background:#ffffff1a;border:1px solid #ffffff33;border-radius:10px;min-width:80px;padding:10px}
+.cd b{display:block;font:900 30px Impact,sans-serif}
+.author{display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:start}
+@media(max-width:700px){.author{grid-template-columns:1fr}}
+.map{width:100%;border-radius:12px;border:1px solid var(--bd);display:block}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 5%;border-top:1px solid var(--bd)}
+audio{width:100%;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <span class="logo">MCU FANS</span>
+  <nav id="nav">
+    <a href="#home">Головна</a><a href="#films">Фільми</a><a href="#upcoming">Майбутні проєкти</a><a href="#heroes">Герої</a><a href="#author">Про автора</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Marvel Cinematic Universe</h1>
+  <p>Неофіційний український фан-паблік: все про фільми, серіали та майбутні проєкти кіновсесвіту Marvel.</p>
+  <div style="font-weight:700;margin-bottom:6px">До прем'єри «Месників: Судний день»:</div>
+  <div class="cd" id="cd"></div>
+</section>
+
+<main>
+<!-- ГОЛОВНА -->
+<div class="page" id="home">
+  <h2>Ласкаво просимо!</h2>
+  <p class="sub">Кіновсесвіт Marvel (MCU) стартував у 2008 році з «Залізної людини» і став найкасовішою франшизою в історії кіно. Тут зібрано головне про його минуле та майбутнє.</p>
+  <div class="stats">
+    <div><b>2008</b>старт MCU</div><div><b>30+</b>фільмів</div><div><b>6</b>фаз Саги</div><div><b>$29 млрд</b>світових зборів*</div>
+  </div>
+  <h2>Хронологія Саги</h2>
+  <div class="tl">
+    <div class="card"><span class="tag">Сага Нескінченності</span><h3>Фази 1–3 (2008–2019)</h3><p>Від «Залізної людини» до «Месників: Завершення». Танос, Камені Нескінченності та історичний фінал.</p></div>
+    <div class="card"><span class="tag g">Сага Мультивсесвіту</span><h3>Фази 4–6 (2021–2027)</h3><p>Мультивсесвіт, Канг Завойовник, а згодом — Доктор Дум. Завершиться «Месниками: Таємні війни».</p></div>
+  </div>
+  <h2>Послухати</h2>
+  <p class="sub">Тут можна додати аудіо (наприклад, саундтрек зі своєю ліцензією): замініть src на власний файл.</p>
+  <audio controls><source src="" type="audio/mpeg">Ваш браузер не підтримує аудіо.</audio>
+</div>
+
+<!-- ФІЛЬМИ -->
+<div class="page" id="films">
+  <h2>Фільми MCU</h2>
+  <p class="sub">Обирайте фазу, щоб побачити фільми.</p>
+  <div class="tabs" id="phaseTabs"></div>
+  <div class="grid" id="filmGrid"></div>
+</div>
+
+<!-- МАЙБУТНЄ -->
+<div class="page" id="upcoming">
+  <h2>Майбутні проєкти Marvel</h2>
+  <p class="sub">Дані станом на середину 2026 року. Дати прем'єр можуть змінюватися — перевіряйте офіційні джерела Marvel Studios.</p>
+  <div class="tl" id="upList"></div>
+</div>
+
+<!-- ГЕРОЇ -->
+<div class="page" id="heroes">
+  <h2>Герої та команди</h2>
+  <p class="sub">Ключові персонажі, навколо яких побудовано всесвіт.</p>
+  <div class="grid" id="heroGrid"></div>
+</div>
+
+<!-- АВТОР -->
+<div class="page" id="author">
+  <h2>Про автора сайту</h2>
+  <div class="author">
+    <div class="card" style="text-align:center">
+      <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="Аватар"><circle cx="100" cy="100" r="96" fill="#e62429"/><circle cx="100" cy="78" r="34" fill="#fff"/><path d="M36 170c10-38 38-52 64-52s54 14 64 52a96 96 0 0 1-128 0z" fill="#fff"/></svg>
+      <h3>Тищук Владислав</h3><p>Група : 21ККН</p>
+    </div>
+    <div>
+      <div class="card">
+        <p><b>Ім'я:</b> Тищук Владислав Богданович</p>
+        <p><b>Група:</b> 21-ККН</p>
+        <p><b>E-mail:</b> <a href="mailto:vladsekotizin800@gmail.com" style="color:var(--ac)">vladsekotizin800@gmail.com</a></p>
+        <p><b>Про себе:</b> Цей сайт був створений для лабораторной роботи.</p>
+      </div>
+      <h2 style="font-size:22px">Моя локація</h2>
+      <svg class="map" viewBox="0 0 600 260" role="img" aria-label="Схема карти"><rect width="600" height="260" fill="#cfe3d2"/><path d="M0 170 Q150 120 300 160 T600 110" stroke="#9cc3e6" stroke-width="26" fill="none"/><path d="M80 0 L200 260 M0 90 L600 70 M380 0 L430 260" stroke="#fff" stroke-width="8" opacity=".85"/><g transform="translate(300 105)"><path d="M0 0c-18-26-30-36-30-54a30 30 0 0 1 60 0c0 18-12 28-30 54z" fill="#e62429"/><circle cy="-54" r="11" fill="#fff"/></g></svg>
+      <p style="margin-top:10px"><a class="btn" id="mapLink" href="https://www.openstreetmap.org/#map=6/49.0/31.5" target="_blank" rel="noopener">Відкрити на OpenStreetMap</a></p>
+      <p class="sub">Щоб вказати власну домівку, змініть координати в посиланні «mapLink».</p>
+    </div>
+  </div>
+</div>
+</main>
+<footer>Неофіційний фан-сайт для навчальної лабораторної роботи. Marvel та назви персонажів належать їхнім правовласникам. © 2026</footer>
+
+<script>
+const films={
+"Фаза 1":[["Залізна людина","2008","Тоні Старк стає Залізною людиною — початок усього."],["Тор","2011","Бог грому потрапляє на Землю."],["Перший месник","2011","Стів Роджерс стає Капітаном Америка."],["Месники","2012","Герої вперше об'єднуються проти Локі."]],
+"Фаза 2":[["Месники: Ера Альтрона","2015","Штучний інтелект Альтрон загрожує людству."],["Вартові Галактики","2014","Космічна банда невдах рятує галактику."],["Людина-мураха","2015","Скотт Ленг отримує костюм, що зменшує."]],
+"Фаза 3":[["Чорна пантера","2018","Т'Чалла стає королем Ваканди."],["Месники: Війна нескінченності","2018","Танос полює на Камені Нескінченності."],["Месники: Завершення","2019","Фінал Саги Нескінченності."],["Людина-павук: Далеко від дому","2019","Піter Паркер у Європі."]],
+"Фаза 4":[["Шан-Чі","2021","Майстер бойових мистецтв проти Десяти кілець."],["Людина-павук: Шлях додому нема","2021","Мультивсесвіт відкривається."],["Доктор Стрейндж у мультивсесвіті божевілля","2022","Стрейндж і Ванда."]],
+"Фаза 5":[["Капітан Америка: Дивний новий світ","2025","Сем Вілсон у ролі Капітана Америка."],["Громовержці*","2025","Команда антигероїв."],["Фантастична четвірка: Перші кроки","2025","Перша родина Marvel у MCU."]],
+"Фаза 6":[["Людина-павук: Новий день","2026","Нова глава історії Пітера Паркера."],["Месники: Судний день","2026","Доктор Дум — головний антагоніст."],["Месники: Таємні війни","2027","Фінал Саги Мультивсесвіту."]]};
+films["Фаза 3"][3][0]="Людина-павук: Далеко від дому";films["Фаза 3"][3][2]="Пітер Паркер у Європі.";
+const up=[["Месники: Судний день","18 грудня 2026","Фільм","Месники, Фантастична четвірка та X-Men зустрічають Доктора Дума."],
+["Vision Quest","2026","Серіал","Disney+: історія Віжна після подій «Ванда/Віжн»."],
+["Месники: Таємні війни","17 грудня 2027","Фільм","Масштабний фінал Саги Мультивсесвіту."],
+["Шан-Чі 2","у розробці","Фільм","Продовження пригод майстра кунг-фу."],
+["Нові сезони серіалів","2026–2027","Серіали","Нові сезони «Демона-месника» та інших проєктів Disney+."]];
+const heroes=[["Залізна людина","Тоні Старк — геній, мільярдер, філантроп."],["Капітан Америка","Символ мужності та честі."],["Тор","Бог грому з Асґарда."],["Чорна вдова","Наталі Романофф — шпигунка Месників."],["Халк","Брюс Беннер і його зелена сила."],["Людина-павук","Дружній сусід Пітер Паркер."],["Доктор Стрейндж","Верховний маг."],["Чорна пантера","Король Ваканди."]];
+const $=s=>document.querySelector(s);
+const card=(t,p,x='')=>`<div class="card">${x}<h3>${t}</h3><p>${p}</p></div>`;
+function showFilms(ph){$('#filmGrid').innerHTML=films[ph].map(f=>card(f[0],f[2],`<div class="yr">${f[1]}</div>`)).join('');
+document.querySelectorAll('#phaseTabs button').forEach(b=>b.classList.toggle('on',b.textContent===ph))}
+$('#phaseTabs').innerHTML=Object.keys(films).map(k=>`<button>${k}</button>`).join('');
+$('#phaseTabs').onclick=e=>{if(e.target.tagName==='BUTTON')showFilms(e.target.textContent)};
+showFilms("Фаза 1");
+$('#upList').innerHTML=up.map(u=>card(u[0],u[3],`<span class="tag">${u[2]}</span> <span class="tag g">${u[1]}</span>`)).join('');
+$('#heroGrid').innerHTML=heroes.map(h=>card(h[0],h[1])).join('');
+function route(){const id=(location.hash||'#home').slice(1);const pg=document.getElementById(id)?id:'home';
+document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id===pg));
+document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+pg));window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+const T=new Date('2026-12-18T00:00:00');
+function tick(){let d=Math.max(0,T-new Date());const v=[[864e5,'днів'],[36e5,'годин'],[6e4,'хвилин'],[1e3,'секунд']];
+$('#cd').innerHTML=v.map(([m,l])=>{const n=Math.floor(d/m);d-=n*m;return `<div><b>${n}</b>${l}</div>`}).join('')}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
